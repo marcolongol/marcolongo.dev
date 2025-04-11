@@ -29,6 +29,24 @@ importers:
       '@angular/router':
         specifier: ~19.2.0
         version: 19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2)
+      '@ngrx/component-store':
+        specifier: ^19.0.0
+        version: 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      '@ngrx/effects':
+        specifier: ^19.0.0
+        version: 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@ngrx/store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(rxjs@7.8.2)
+      '@ngrx/entity':
+        specifier: ^19.0.0
+        version: 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@ngrx/store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(rxjs@7.8.2)
+      '@ngrx/router-store':
+        specifier: ^19.0.0
+        version: 19.1.0(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@angular/router@19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2))(@ngrx/store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(rxjs@7.8.2)
+      '@ngrx/signals':
+        specifier: ^19.1.0
+        version: 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      '@ngrx/store':
+        specifier: ^19.0.0
+        version: 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -57,6 +75,9 @@ importers:
       '@eslint/js':
         specifier: ^9.8.0
         version: 9.24.0
+      '@ngrx/schematics':
+        specifier: ^19.0.0
+        version: 19.1.0
       '@nx/angular':
         specifier: 20.7.2
         version: 20.7.2(665e633b495fe282f99f5aa8ddd26537)
@@ -117,6 +138,9 @@ importers:
       eslint-plugin-cypress:
         specifier: ^3.5.0
         version: 3.6.0(eslint@9.24.0(jiti@1.21.7))
+      jasmine-marbles:
+        specifier: ~0.9.1
+        version: 0.9.2(rxjs@7.8.2)
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@18.16.9)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.5.29(@swc/helpers@0.5.13))(@types/node@18.16.9)(typescript@5.7.3))
@@ -2000,6 +2024,53 @@ packages:
 
   '@napi-rs/wasm-runtime@0.2.4':
     resolution: {integrity: sha512-9zESzOO5aDByvhIAsOy9TbpZ0Ur2AJbUI7UT73kcUTS2mxAMHOBaa1st/jAymNoCtvrit99kkzT1FZuXVcgfIQ==}
+
+  '@ngrx/component-store@19.1.0':
+    resolution: {integrity: sha512-CYgmYlSWrNEUiP+5LHA05RhEpqkomFv+C3w0GhpcFcK4dYzipZY7BSJLaYdMCM+Q1Ce3FwBkEMgSSUycL0B5zw==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      rxjs: ^6.5.3 || ^7.5.0
+
+  '@ngrx/effects@19.1.0':
+    resolution: {integrity: sha512-rGRN0ZnzAPmQdUPvmoqZsK7Da/AoCfQcfody+h6PfHTwXNm+M2MRc8tXO6C+fznMRww8ZgNror2dfFmoOSOvNg==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      '@ngrx/store': 19.1.0
+      rxjs: ^6.5.3 || ^7.5.0
+
+  '@ngrx/entity@19.1.0':
+    resolution: {integrity: sha512-Cy+uT5Lzs0fSaqcAtsK6ECac2ETma7UFnSnqLXSKPQmiBMNMMvP2On1c+zxaPgySG2R5kxgA0yDuHGsRiLAprA==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      '@ngrx/store': 19.1.0
+      rxjs: ^6.5.3 || ^7.5.0
+
+  '@ngrx/router-store@19.1.0':
+    resolution: {integrity: sha512-eMS6WtZfx29Zmlm3imgEm1WcNTRY3UGdNL7fWJyPWUPUMLArkmyDQsP+NBveLIEj1yJs8U4S8V9gzqPSiGYLHA==}
+    peerDependencies:
+      '@angular/common': ^19.0.0
+      '@angular/core': ^19.0.0
+      '@angular/router': ^19.0.0
+      '@ngrx/store': 19.1.0
+      rxjs: ^6.5.3 || ^7.5.0
+
+  '@ngrx/schematics@19.1.0':
+    resolution: {integrity: sha512-n4t0BkVOXL9RMu6i6ef14+021v6nnIrMTLH/kK0HLtW12r8lti+n3qmo+A7K3mWQmS+9eTcZcjEAF3YvfvT64g==}
+
+  '@ngrx/signals@19.1.0':
+    resolution: {integrity: sha512-v8sbb+Iox9kdIaKbFgt4Z1W+NxzIU4+g+6qQU6/c27UmtQXv0s1zUKKofPRK0qwkaZzNWkxNToxyoE285ukqcQ==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    peerDependenciesMeta:
+      rxjs:
+        optional: true
+
+  '@ngrx/store@19.1.0':
+    resolution: {integrity: sha512-8kKCSFahTpRTx3f/wwcDjItdFnk2IMoorWRjTI2U/MGWuEi4flqLNWcX99s759e7TI6PctiGsaS8jnJXIUS8Jg==}
+    peerDependencies:
+      '@angular/core': ^19.0.0
+      rxjs: ^6.5.3 || ^7.5.0
 
   '@ngtools/webpack@19.2.6':
     resolution: {integrity: sha512-/jWpZUoMru3YbRJAPZ2KroUSzE6Ak5Hav219raYQaBXVtyLAvFE5VC1/CiH0wTYnb/dyjxzWq38ftOr/vv0+tg==}
@@ -4739,6 +4810,11 @@ packages:
     resolution: {integrity: sha512-2P4SQ0HrLQ+fw6llpLnOaGAvN2Zu6778SJMrCUwns4fOoG9ayrTiZk3VV8sCPkVZF8ab0zksVpS8FDY5pRCNBA==}
     engines: {node: '>=10'}
     hasBin: true
+
+  jasmine-marbles@0.9.2:
+    resolution: {integrity: sha512-T7RjG4fRsdiGGzbQZ6Kj39qYt6O1/KIcR4FkUNsD3DUGkd/AzpwzN+xtk0DXlLWEz5BaVdK1SzMgQDVw879c4Q==}
+    peerDependencies:
+      rxjs: ^7.0.0
 
   jest-changed-files@29.7.0:
     resolution: {integrity: sha512-fEArFiwf1BpQ+4bXSprcDc3/x4HSzL4al2tozwVpDFpsxALjLYdyiIK4e5Vz66GQJIbXJ82+35PtysofptNX2w==}
@@ -9606,6 +9682,50 @@ snapshots:
       '@emnapi/runtime': 1.4.0
       '@tybys/wasm-util': 0.9.0
 
+  '@ngrx/component-store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/core': 19.2.5(rxjs@7.8.2)(zone.js@0.15.0)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@ngrx/effects@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@ngrx/store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/core': 19.2.5(rxjs@7.8.2)(zone.js@0.15.0)
+      '@ngrx/store': 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@ngrx/entity@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@ngrx/store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/core': 19.2.5(rxjs@7.8.2)(zone.js@0.15.0)
+      '@ngrx/store': 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@ngrx/router-store@19.1.0(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@angular/router@19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2))(@ngrx/store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      '@angular/core': 19.2.5(rxjs@7.8.2)(zone.js@0.15.0)
+      '@angular/router': 19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2)
+      '@ngrx/store': 19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
+  '@ngrx/schematics@19.1.0': {}
+
+  '@ngrx/signals@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/core': 19.2.5(rxjs@7.8.2)(zone.js@0.15.0)
+      tslib: 2.8.1
+    optionalDependencies:
+      rxjs: 7.8.2
+
+  '@ngrx/store@19.1.0(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/core': 19.2.5(rxjs@7.8.2)(zone.js@0.15.0)
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
   '@ngtools/webpack@19.2.6(@angular/compiler-cli@19.2.5(@angular/compiler@19.2.5)(typescript@5.7.3))(typescript@5.7.3)(webpack@5.98.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.25.1))':
     dependencies:
       '@angular/compiler-cli': 19.2.5(@angular/compiler@19.2.5)(typescript@5.7.3)
@@ -12876,6 +12996,11 @@ snapshots:
       chalk: 4.1.2
       filelist: 1.0.4
       minimatch: 3.1.2
+
+  jasmine-marbles@0.9.2(rxjs@7.8.2):
+    dependencies:
+      lodash: 4.17.21
+      rxjs: 7.8.2
 
   jest-changed-files@29.7.0:
     dependencies:
